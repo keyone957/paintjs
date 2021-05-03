@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>PaintJS</title>
+</head>
+<body>
+    <canvas id="jsCanvas" class="canvas"></canvas> <!--js작업할땐 id사용,css를 작업할땐 class사용-->
+    <div class="controls">
+        <div class="controls__range">
+            <!-- 페인트 브러쉬의 크기 -->
+            <input type="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1" />
+            <!-- 페인트 브러쉬 크기 최소,최대값 적용, default값(value),틱마다 얼마나 크기 조절 하는지(step) -->
+        </div>
+        <div class="controls__btns">
+            <button id="jsMode">FILL</button> <!--fill버튼 -->
+            <button id="jsSave">Save</button> <!--save버튼 -->
+            <!-- defalt로 painting로 설정하여 클릭하면 fill로 바뀌
+                고 다시 클릭하면 painting이 되게 할것 -->
+        </div>
+        <div class="controls__colors" id="jsColors">
+            <div class="controls__color jsColor"style="background-color:#2c2c2c"></div>
+            <div class="controls__color jsColor"style="background-color:white"></div>
+            <div class="controls__color jsColor"style="background-color:#FF3B30"></div>
+            <div class="controls__color jsColor"style="background-color:#FF9500"></div>
+            <div class="controls__color jsColor"style="background-color:#FFCC00"></div>
+            <div class="controls__color jsColor"style="background-color:#4CD963"></div>
+            <div class="controls__color jsColor"style="background-color:#5AC8FA;"></div>
+            <div class="controls__color jsColor"style="background-color:#0579FF"></div>
+            <div class="controls__color jsColor"style="background-color:#5856D6"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
